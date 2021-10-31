@@ -30,3 +30,16 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 ---
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
+---
+
+---
+
+## SECTION 5 : USER GUIDE
+
+`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
+
+
+## SECTION 6 : PROJECT REPORT
+
+---
+
