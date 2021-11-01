@@ -33,7 +33,7 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 ---
 #####[video for high level system design video](https://youtu.be/2LVCiU9Jfuk)
 
-<iframe src="https://youtu.be/2LVCiU9Jfuk" width="500px" height="300px" controls="controls">
+<iframe src="https://youtu.be/2LVCiU9Jfuk" width="500px" height="300px">
 
 
 ---
