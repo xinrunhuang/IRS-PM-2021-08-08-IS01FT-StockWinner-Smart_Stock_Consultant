@@ -39,7 +39,7 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 ---
 ## SECTION 6 : PROJECT REPORT
 
-
+`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport` [ Project Report Link]()
 ---
 
 ## SECTION 5 : USER GUIDE
