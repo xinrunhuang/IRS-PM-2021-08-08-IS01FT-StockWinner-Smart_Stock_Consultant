@@ -42,8 +42,7 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 
 `Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
 
-<iframe height=498 width=510 src="http://vodkgeyttp9.vod.126.net/cloudmusic/1FgSA8LX_3222439799_sd.mp4?wsSecret=25dc3b1d0e2fcc4c65db0cab7d6f107d&wsTime=1606454043">
-
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1635726765/video_to_markdown/images/youtube--2LVCiU9Jfuk-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2LVCiU9Jfuk "")
 ## SECTION 6 : PROJECT REPORT
 
 ---
