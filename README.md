@@ -40,12 +40,12 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 ## SECTION 6 : PROJECT REPORT
 ---
 
-`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport` [Project Report Link]()
+`Refer to <Project Report.pdf> in project report at Github Folder: ProjectReport` [Project Report Link]()
 
 
 ## SECTION 5 : USER GUIDE
 
-`Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`  [Installation & User Guide Link](https://github.com/xinrunhuang/IRS-PM-2021-01-16-IS09PT-GRP-Smart-Stock-Consultant/blob/main/ProjectReport/Installation%20%26%20User%20Guide.pdf)
+`Refer to appendix <Installation & User Guide.pdf> in project report at Github Folder: ProjectReport`  [Installation & User Guide Link](https://github.com/xinrunhuang/IRS-PM-2021-01-16-IS09PT-GRP-Smart-Stock-Consultant/blob/main/ProjectReport/Installation%20%26%20User%20Guide.pdf)
 
 
 ---
