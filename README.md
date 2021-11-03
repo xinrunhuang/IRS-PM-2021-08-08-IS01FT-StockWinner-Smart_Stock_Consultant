@@ -31,10 +31,11 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 ---
+#### video for product introduction
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1635948685/video_to_markdown/images/youtube--X-UGGQOEmGI-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/X-UGGQOEmGI "")
+
 #### video for high level system design video
-
-
-[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1635726765/video_to_markdown/images/youtube--2LVCiU9Jfuk-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2LVCiU9Jfuk "")
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1635948706/video_to_markdown/images/youtube--2LVCiU9Jfuk-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/2LVCiU9Jfuk "")
 
 ---
 ## SECTION 6 : PROJECT REPORT
