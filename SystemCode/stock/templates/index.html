@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/me.css">
+    <link href="/static/images/bitbug_favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>Stock Consultant</title>
+</head>
+<body>
+<nav class="ui inverted attached segment m-padded-tb-min m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <div class="ui inverted secondary menu">
+                <h2 class="ui yellow header item" style="font-family: STSong">Stock Consultant</h2>
+                <a class="active item" href="/">
+                    Overview
+                </a>
+                <a class="item" href="/predicall">
+                    Detail
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="m-container-tiny m-padded-tb-big" style="margin-top:3em !important;">
+    <div class="ui container">
+        <div  class="ui secondary segment form">
+            <input type="hidden" name="page" >
+            <div class="inline fields">
+
+                <div class="field">
+<!--                    <form id="search-form">-->
+                    <div class="ui left labeled action input">
+                        <label class="ui compact teal basic label">Company</label>
+                        <div class="ui fluid multiple search selection dropdown">
+                            <input type="hidden" name="company">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Company Name</div>
+                            <div class="menu">
+                                {% for co in companies %}
+                                <div class="item" data-value="{{co.id}}">{{co.name}}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="field">-->
+                <!--<div class="ui checkbox">-->
+                <!--<input type="checkbox" id="recommend" name="recommend">-->
+                <!--<label for="recommend">推荐</label>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="field">
+                    <button  type="button" id="search-btn" class="ui teal basic button"><i class="search icon"></i>Search</button>
+                </div>
+                <div class="field">
+                    <button class="ui red basic button" id="pred-btn">Prediction</button>
+                </div>
+            </div>
+        </div>
+        <div id="table-container">
+            <table class="ui compact red table">
+                <thead>
+                <tr align="center">
+                    <th>Rank(*market cap)</th>
+                    <th align="left">Name</th>
+                    <th>*Price</th>
+                    <th>Trend(1 month)</th>
+                    <th>Operation</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for co in companies %}
+                <tr>
+                    <td class="text-center">{{ co.id }}</td>
+                    <td ><h4 class="ui image header">
+                        <img src={{co.smlpic}} class="ui left rounded image">
+                        <div class="content" style="text-align:left !important;">
+                            <p style="margin-bottom: 0em !important;">{{ co.name }}</p>
+                            <div class="sub header">{{co.symbol}}
+                            </div>
+                        </div>
+                    </h4></td>
+                    <td class="text-center">${{co.price}}</td>
+                    {% if co.trend %}
+                    <td class="text-center"><h3 class="ui red header">up</h3></td>
+                    {% else %}
+                    <td class="text-center"><h3 class="ui green header">down</h3></td>
+                    {% endif %}
+                    <td class="text-center">
+                        <!--th:href="@{/admin/types/{id}/input(id=${type.id})}"-->
+                        <a href="{{ '/detail/%s'%co.id }}" class="ui mini red basic button">Predict</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                <!--<tr>-->
+                <!--<th colspan="7">-->
+                <!--<div class="ui inverted divided stackable grid">-->
+                <!--<div class="three wide column" align="center">-->
+                <!--<a class="item" href="#" th:attr="data-page=${pageInfo.pageNum}-1" onclick="page(this)" th:unless="${pageInfo.isFirstPage}">上一页</a>-->
+                <!--</div>-->
+
+                <!--<div class="ten wide column" align="center">-->
+                <!--<p >第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 篇文章</p>-->
+                <!--</div>-->
+
+                <!--<div class="three wide column" align="center">-->
+                <!--<a class="item" href="#" th:attr="data-page=${pageInfo.pageNum}+1" onclick="page(this)" th:unless="${pageInfo.isLastPage}">下一页</a>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div align="center">-->
+                <!--<a href="#" th:href="@{/admin/blogs/input}">-->
+                <!--<button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>-->
+                <!--</a>-->
+                <!--</div>-->
+                <!--</th>-->
+                <!--</tr>-->
+                </tfoot>
+            </table>
+
+
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!--底部footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui left aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Market cap</h1>
+                <div class="sub header ">
+                    The market cap refers to market capitalization, is the value of a publicly listed company.It can be calculated by multiplying the share price with the amount of outstanding shares.
+                </div>
+            </div>
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Price</h1>
+                <div class="sub header ">
+                    The price refers to share price.
+                </div>
+            </div>
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Trend</h1>
+                <div class="sub header ">
+                    Trend refers to the change of today price compared with one month ago.
+                </div>
+            </div>
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Contact us</h1>
+                <div class="sub header ">
+                    For inquiries, feel free to email stock_project@gmail.com
+                </div>
+            </div>
+
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny" style="text-align: center !important;">Copyright &copy 2021-2022 Stock Prediction Desined by ISS Intelligent System group 9</p>
+    </div>
+    <br>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/css/chatux.js"></script>
+<script>
+
+    const chatux = new ChatUx();
+
+    const opt = {
+        renderMode: 'auto',//'auto' or 'pc' or 'mobile'
+        buttonOffWhenOpenFrame: false,//only for pc mode
+        bot: {
+            wakeupText: null,//user input which is automatically send to server on startup
+            botPhoto: 'https://riversun.github.io/img/riversun_144.png',//URL of bot photo image
+            humanPhoto: null,//URL of human photo image
+            widget: {
+                sendLabel: 'SEND',
+                placeHolder: 'Say something'
+            }
+        },
+        api: {
+            // endpoint: 'https://script.google.com/macros/s/AKfycbwpf8iZfGXkJD6K__oCVQYF35HLBQjYxmKP0Ifrpe_piK4By4rh/exec',
+            endpoint: 'http://localhost:5000/chat',
+            method: 'GET',
+            dataType: 'json',
+            errorResponse: {
+                output: [
+                    {type: 'text', value: 'Sorry, an error occurred'}
+                ]
+            },
+            //you can set custom HTTP-header
+            // headers: {
+            //     'X-Example-Header': 'Header Value1'
+            // },
+
+            //you can set custom query params
+            // params: {
+            //     'param1': 'myParam1',
+            //     'param2': 'myParam2',
+            // }
+        },
+        window: {
+            title: 'My chat',
+            infoUrl: 'https://github.com/riversun/chatux',
+            size: {
+                width: 350,
+                height: 500,
+                minWidth: 300,
+                minHeight: 300,
+                titleHeight: 50
+            },
+            appearance: {
+                border: {
+                    shadow: '2px 2px 10px  rgba(0, 0, 0, 0.5)',
+                    width: 0,
+                    radius: 6
+                },
+                titleBar: {
+                    fontSize: 14,
+                    color: 'white',
+                    background: '#4784d4',
+                    leftMargin: 40,
+                    height: 40,
+                    buttonWidth: 36,
+                    buttonHeight: 16,
+                    buttonColor: 'white',
+                    buttons: [
+                        {
+                            fa: 'fas fa-times',
+                            name: 'hideButton',
+                            visible: true
+                        }
+                    ],
+                    buttonsOnLeft: [
+                        {
+                            fa: 'fas fa-comment-alt',
+                            name: 'info',
+                            visible: true
+                        }
+                    ],
+                },
+            }
+        },
+        wakeupButton: {
+            right: 20,
+            bottom: 20,
+            size: 60,
+            fontSize: 25
+        },
+        methods: {
+            onChatWindowCreate: (win) => {
+                console.log('#onChatWindowCreate');
+            },
+            onChatWindowPause: (win) => {
+                console.log('#onChatWindowPause');
+            },
+            onChatWindowResume: (win) => {
+                console.log('#onChatWindowResume');
+            },
+            onUserInput: (userInputText) => {
+
+                console.log('#onUserInput userInputText=' + userInputText);
+
+                if (userInputText === 'end') {
+                    const consumed = true;
+                    chatux.dispose();
+                    return consumed;
+                }
+            },
+            //For local test, get the user input text but stop accessing the chat server.
+            // onServerProcess: (userInputText) => {
+            //     const response = {"output": [{"type": "text", "value": 'You just said "' + userInputText + '"'}]};
+            //     return response;
+            // },
+            // onPrepareRequest: (httpClient) => {
+            //     httpClient.params.mykey1 = 'valOfmykey1';//set original query param
+            // },
+            // onFinishRequest: (httpClient) => {
+            //     delete httpClient.params.mykey1;
+            // },
+            onServerResponse: (response) => {
+                console.log('#onServerResponse response=' + JSON.stringify(response));
+                return response;
+            }
+        }
+    };
+
+    //initialize
+    chatux.init(opt);
+
+    let isAutoStartChat = false;
+    if (chatux.isMobileDevice()) {
+        isAutoStartChat = false;
+    }
+
+    chatux.start(isAutoStartChat);
+
+</script>
+<script>
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    $("#search-btn").click(function () {
+        var name = $("[name='company']").val();
+        // alert(name)
+        $.ajax({
+            type:"POST",
+            url:"/search",
+            data:{
+                "name" : name
+            },
+            // async:false
+            success:function (data) {
+                var url = "/searchresult/"+data;
+                window.location.href = url
+                // alert(data)
+            }
+        })
+    })
+
+    $("#pred-btn").click(function () {
+        var prename = $("[name='company']").val();
+        // alert(name)
+        $.ajax({
+            type:"POST",
+            url:"/search",
+            data:{
+                "name" : prename
+            },
+            // async:false
+            success:function (data) {
+                var url = "/pred-companies/"+data;
+                window.location.href = url
+                // alert(data)
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/me.css">
+    <link href="/static/images/bitbug_favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>Company</title>
+</head>
+<body>
+<nav class="ui inverted attached segment m-padded-tb-min m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <div class="ui inverted secondary menu">
+                <h2 class="ui yellow header item" style="font-family: STSong">Stock Consultant</h2>
+                <a class=" item" href="/">
+                    Overview
+                </a>
+                <a class="active item">
+                    Detail
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+<div class="m-container-tiny m-padded-tb-big">
+    <div class="ui container">
+        {% for co in company%}
+        <div class="ui segment m-padded-tb-large">
+            <div class="ui divided grid m-padded-tb-small">
+                <!--<div class="ui stackable grid" style="margin-top: 3em!important;margin-bottom: 3em!important;">-->
+                    <div class="four wide column m-padded-tb-large">
+                        <img src="{{co.larpic}}" alt="" class="ui rounded image">
+                    </div>
+                    <div class="twelve wide column">
+                        <div class="ui segment">
+                            <div class="ui three column very relaxed grid">
+                                <div class="ui column">
+                                    <div class="ui vertical segment" style="border-bottom-width: 0px !important;">
+                                        <h2 class="ui header">
+                                            {{co.name}}
+                                        </h2>
+                                        <div class="sub header">
+                                            <font style="color:rgba(13,13,16,0.44)">{{co.symbol}}</font>
+                                        </div>
+                                    </div>
+                                    <div class="ui vertical segment" style="border-bottom-width: 0px !important;">
+                                        <h2 class="ui header">
+                                            Rank
+                                        </h2>
+                                        <div class="sub header">
+                                            {{co.id}}
+                                        </div>
+                                    </div>
+                                    <div class="ui vertical segment">
+                                        <h2 class="ui header">
+                                            Market cap
+                                        </h2>
+                                        <div class="sub header">
+                                            <font size="3">$&nbsp{{co.market}}&nbspBillion</font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui column">
+                                    <div class="ui vertical segment" style="border-bottom-width: 0px !important;">
+                                        <h2 class="ui header">
+                                            Share price
+                                        </h2>
+                                        <div class="sub header">
+                                            {% if co.trend %}
+                                            <font size="5" face="arial" color="red">{{co.price}}({{co.change}})</font>
+                                            {% else %}
+                                            <font size="5" face="arial" color="#228b22">{{co.price}}({{co.change}})</font>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="ui vertical segment" style="border-bottom-width: 0px !important;">
+                                        <h2 class="ui header">
+                                            *Annual Rate
+                                        </h2>
+                                        <div class="sub header">
+                                            <b><font size="4">{{co.annual}}</font></b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui column">
+                                    <div class="ui vertical segment">
+                                        <h2 class="ui header">
+                                            Prediction
+                                        </h2>
+                                        {% if co.prediction %}
+                                        <div class="ui buttons">
+                                            <button class="ui red button"> &nbsp&nbsp up &nbsp&nbsp </button>
+                                            <div class="or"></div>
+                                            <button class="ui button">down</button>
+                                        </div>
+                                        {% else %}
+                                        <div class="ui buttons">
+                                            <button class="ui button"> &nbsp&nbspup&nbsp&nbsp </button>
+                                            <div class="or"></div>
+                                            <button class="ui positive button">down</button>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!--<div class="eight wide column">-->
+                        <!--<h2 class="ui header">-->
+                            <!--Rank-->
+                        <!--</h2>-->
+                        <!--<div class="sub header">-->
+                            <!--1-->
+                        <!--</div>-->
+                    <!--</div>-->
+            </div>
+        </div>
+        {% endfor%}
+        <div class="ui grid">
+            <div class="four wide column"></div>
+            <div class="four wide column"></div>
+            <div class="four wide column"></div>
+            <div class="four wide column"></div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui left aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="eight wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Market cap</h1>
+                <div class="sub header ">
+                    The market cap refers to market capitalization, is the value of a publicly listed company.It can be calculated by multiplying the share price with the amount of outstanding shares.
+                </div>
+            </div>
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Annual Rate</h1>
+                <div class="sub header ">
+                    The annual return of stock investment if we apply our machine learning method on investment.
+                </div>
+            </div>
+            <div class="four wide column">
+                <h1 class="ui inverted header m-text-thin m-text-spaced">*Contact us</h1>
+                <div class="sub header ">
+                    For inquiries, feel free to email stock_project@gmail.com
+                </div>
+            </div>
+
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny" style="text-align: center !important;">Copyright &copy 2021-2022 Stock Prediction Desined by ISS Intelligent System group 9</p>
+    </div>
+    <br>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/css/chatux.js"></script>
+<script>
+
+
+    // $('#pricechange').attr({
+    //     color : "green"
+    // });
+
+    const chatux = new ChatUx();
+
+    const opt = {
+        renderMode: 'auto',//'auto' or 'pc' or 'mobile'
+        buttonOffWhenOpenFrame: false,//only for pc mode
+        bot: {
+            wakeupText: null,//user input which is automatically send to server on startup
+            botPhoto: 'https://riversun.github.io/img/riversun_144.png',//URL of bot photo image
+            humanPhoto: null,//URL of human photo image
+            widget: {
+                sendLabel: 'SEND',
+                placeHolder: 'Say something'
+            }
+        },
+        api: {
+            // endpoint: 'https://script.google.com/macros/s/AKfycbwpf8iZfGXkJD6K__oCVQYF35HLBQjYxmKP0Ifrpe_piK4By4rh/exec',
+            endpoint: 'http://localhost:5000/chat',
+            method: 'GET',
+            dataType: 'json',
+            errorResponse: {
+                output: [
+                    {type: 'text', value: 'Sorry, an error occurred'}
+                ]
+            },
+            //you can set custom HTTP-header
+            // headers: {
+            //     'X-Example-Header': 'Header Value1'
+            // },
+
+            //you can set custom query params
+            // params: {
+            //     'param1': 'myParam1',
+            //     'param2': 'myParam2',
+            // }
+        },
+        window: {
+            title: 'My chat',
+            infoUrl: 'https://github.com/riversun/chatux',
+            size: {
+                width: 350,
+                height: 500,
+                minWidth: 300,
+                minHeight: 300,
+                titleHeight: 50
+            },
+            appearance: {
+                border: {
+                    shadow: '2px 2px 10px  rgba(0, 0, 0, 0.5)',
+                    width: 0,
+                    radius: 6
+                },
+                titleBar: {
+                    fontSize: 14,
+                    color: 'white',
+                    background: '#4784d4',
+                    leftMargin: 40,
+                    height: 40,
+                    buttonWidth: 36,
+                    buttonHeight: 16,
+                    buttonColor: 'white',
+                    buttons: [
+                        {
+                            fa: 'fas fa-times',
+                            name: 'hideButton',
+                            visible: true
+                        }
+                    ],
+                    buttonsOnLeft: [
+                        {
+                            fa: 'fas fa-comment-alt',
+                            name: 'info',
+                            visible: true
+                        }
+                    ],
+                },
+            }
+        },
+        wakeupButton: {
+            right: 20,
+            bottom: 20,
+            size: 60,
+            fontSize: 25
+        },
+        methods: {
+            onChatWindowCreate: (win) => {
+                console.log('#onChatWindowCreate');
+            },
+            onChatWindowPause: (win) => {
+                console.log('#onChatWindowPause');
+            },
+            onChatWindowResume: (win) => {
+                console.log('#onChatWindowResume');
+            },
+            onUserInput: (userInputText) => {
+
+                console.log('#onUserInput userInputText=' + userInputText);
+
+                if (userInputText === 'end') {
+                    const consumed = true;
+                    chatux.dispose();
+                    return consumed;
+                }
+            },
+            //For local test, get the user input text but stop accessing the chat server.
+            // onServerProcess: (userInputText) => {
+            //     const response = {"output": [{"type": "text", "value": 'You just said "' + userInputText + '"'}]};
+            //     return response;
+            // },
+            // onPrepareRequest: (httpClient) => {
+            //     httpClient.params.mykey1 = 'valOfmykey1';//set original query param
+            // },
+            // onFinishRequest: (httpClient) => {
+            //     delete httpClient.params.mykey1;
+            // },
+            onServerResponse: (response) => {
+                console.log('#onServerResponse response=' + JSON.stringify(response));
+                return response;
+            }
+        }
+    };
+
+    //initialize
+    chatux.init(opt);
+
+    let isAutoStartChat = false;
+    if (chatux.isMobileDevice()) {
+        isAutoStartChat = false;
+    }
+
+    chatux.start(isAutoStartChat);
+
+</script>
+</body>
+</html>
