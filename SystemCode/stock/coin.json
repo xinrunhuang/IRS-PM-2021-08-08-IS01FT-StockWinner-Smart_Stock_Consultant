@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mycryptobot-lwpg",
+  "private_key_id": "3778ea192b48fdeb525c7ab03d5304494a3aafc0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCaxv/cDUAM4Ig4\nUNq4hNsvg4NRuq2aeL7OlBb1j4CMdBqxbqfS9p3WLj1C2q3Wvdea0rzSkqmGdhDw\nrV6eWyZluEpQP0xNEXbZQyMmlRTHY39TFe7dUSfaTTM8T6gWdc7kS1pBDRWMXGC4\nZwzAA15YNj7q5kOUcFWEDgyVoMZ9I5LCGItJ+EjAe38hCWX20hK/orRklZk4xIl9\nmweYOm62vhKBgAEoJ/aS9Oo9naNBhFyowc/5Bmpisukj6kq+WzSe74JnfMxpFsEp\ncILlSiTQwheC6kN9XY5o+qk7IlwFKqHdcBcFpO13aynUPa3QTSEefKuUh/VUNuaU\nef7FRDL7AgMBAAECggEADFWXSaTtE0ZupJ13TxgYIL+1K3WAfmk1iROB7UmYn9jK\n0Ppo0zLGRK2RQggleitnCLAKZ/XthS+Ls9plFwj1iBd5JWiXi70i2jdaKd0PxFn+\nz6y74q6kFrOeeL8/JApF/A+wBObmVJxLmumfbJfeh17ltOUeKP13J/U33IUgL3p4\n0045coTDbC1OFrcmW8UADwKMhbU+H9cBTACgdLP8ybbfUiHG/C/Y7KeoySPs2FVf\npsm0ezSuc2jdom2z214/qNreY8uyAB9xR3cwinqPPV3KM8U2cn3aYOi6WxWW1YKf\ni9BU7+jmL/IeDEb9X9UhPvzXN9bN81cOqFKJ3x+SAQKBgQDLGIt+mYEVWMhm3tiM\nmVgorbMF/rEPUDCF3m2pILMyHcxjjUxu7ZNacyeZOKaKsLO3GboxYNDhIJArbL3S\nPNM3fkHA6PuvFfjdCW2HbyRIKJ8NFxbZbc4TNZ9YoZv0pXbcFXBboIyqK12LVhjN\nZMbCvBBtj7lbQcLx1JrFgLqA+wKBgQDDGFTVou57LGmUwBpvWwcEgRsgzim4K+G2\nuU/TMGrgQ7Ds9H2hPVGnAX7oQDxcwARsg81ZkE32nsHMZDTBWezktRIe1Cq1O1Jo\nWPI5HcuML0UTGV+72tpKyeCMkjbjSxA4a37cBfnVWae2qIWppIV6Ri9VbiDY/iUZ\nE6vYN2J2AQKBgG44aOQRDNP39fKWODG9uvGAqyqyuYbU/zB3sU3bOEUXlOfmNDfz\naUfqPPBTpVaZZT8WkEzh/RpgoL1ga3ggmISCWc8G4ih4JTJYPoAE2kzq9r6U7Eqd\n4/va2xqvwkK4VdRFMlAXxp9Hn6HR3O4DJjdi9wtut6qF+vVha4mKPi1nAoGBAIhl\nq3INToQpIcvQnuq5jmd0x/2ghYRwkYbJemihUidmy/xuVqLzFvIW1p4Twt/pk242\nm8wBWrCQf9ehO0zuzPN9MKUDGrTIO64eeYK7NQLWTYmz1L2mnbVp/Kbq1psEcNux\nM+kp+GhUHTBUE9bt4jABf7hPnYF39YHZwewRlLIBAoGBAIcidROg0R9nyy2yS/dO\nYGcTc74PWVcpQYIYpIUWrgDYyzoj9uZl2Q1kGXarAQuvi2bEncD14bgUkwDYM8xp\n1doBin1lczAo4IzIErtmLK0yEP3Ek9SFtIh2iYBmp5rOq+fpaCk2H6dNzyvLrG8n\nLNNwkEZTuBuy8WLXZ/cTeeS1\n-----END PRIVATE KEY-----\n",
+  "client_email": "coin-700@mycryptobot-lwpg.iam.gserviceaccount.com",
+  "client_id": "118095040091139719117",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/coin-700%40mycryptobot-lwpg.iam.gserviceaccount.com"
+}
