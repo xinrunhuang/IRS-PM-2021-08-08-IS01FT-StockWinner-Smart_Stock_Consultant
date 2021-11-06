@@ -40,13 +40,11 @@ Therefore, our team decide to build a machine learning model to predict the stoc
 ---
 ## SECTION 6 : PROJECT REPORT
 ---
-
-`Refer to <Project Report.pdf> in project report at Github Folder: ProjectReport` [Project Report Link]()
+[Project Report Link](https://github.com/xinrunhuang/IRS-PM-2021-08-08-ISY5001FT-StockWinner-Smart_Stock_Consultant/blob/main/ProjectReport/IRS-PM-Project_report-2021-08-02-FT-StockWinner-Smart_Stock_Consultant.pdf)
 
 
 ## SECTION 5 : USER GUIDE
-
-`Refer to appendix <Installation & User Guide.pdf> in project report at Github Folder: ProjectReport`  [Installation & User Guide Link](https://github.com/xinrunhuang/IRS-PM-2021-01-16-IS09PT-GRP-Smart-Stock-Consultant/blob/main/ProjectReport/System%20Installation%20%26%20User%20Guide.pdf)
+[Installation & User Guide Link](https://github.com/xinrunhuang/IRS-PM-2021-01-16-IS09PT-GRP-Smart-Stock-Consultant/blob/main/ProjectReport/System%20Installation%20%26%20User%20Guide.pdf)
 
 
 ---
