@@ -48,6 +48,8 @@ Refer to project report at
 Refer to Installation & User Guide at
 [Installation & User Guide Link](https://github.com/xinrunhuang/IRS-PM-2021-01-16-IS09PT-GRP-Smart-Stock-Consultant/blob/main/ProjectReport/System%20Installation%20%26%20User%20Guide.pdf)
 
+## SECTION 7 : MISCELLANEOUS
 
+[complete code zip file](https://drive.google.com/file/d/1ep2sh_dNNtpIdCGuZ8vTukZm9RFxO2me/view?usp=sharing)
 ---
 
