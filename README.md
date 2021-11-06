@@ -52,5 +52,6 @@ Refer to Installation & User Guide at
 
 [complete code zip file](https://drive.google.com/file/d/1ep2sh_dNNtpIdCGuZ8vTukZm9RFxO2me/view?usp=sharing)
 
-
+[product promotion video link](https://youtu.be/X-UGGQOEmGI)
+[system design video link](https://youtu.be/2LVCiU9Jfuk)
 
